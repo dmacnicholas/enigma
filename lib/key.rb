@@ -9,5 +9,4 @@ attr_reader :key
       combo.join
     end
   end
-
 end
