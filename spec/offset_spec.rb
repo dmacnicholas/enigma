@@ -8,4 +8,8 @@ RSpec.describe Offset do
   it 'exists' do
     expect(@offset).to be_a(Offset)
   end
+
+  it 'can return a date as DDMMYY format' do
+    expect(@offset.date).to eq("040895")
+  end
 end
