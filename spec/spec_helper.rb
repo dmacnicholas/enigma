@@ -6,4 +6,4 @@ SimpleCov.start
 require 'pry'
 require 'date'
 require './lib/enigma'
-require './lib/shift'
+require './lib/key'
