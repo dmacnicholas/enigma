@@ -20,4 +20,8 @@ RSpec.describe Shift do
   it 'can return the values of the final shift' do
     expect(@shift.final_shift).to eq([3, 27, 73, 20])
   end
+
+  it 'can return the new encrypted message'
+    expect(@shift.forward).to eq("keder ohulw")
+  end
 end
