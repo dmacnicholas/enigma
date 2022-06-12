@@ -2,7 +2,7 @@ require './spec_helper'
 
 RSpec.describe Offset do
   before :each do
-    @offset = Offset.new("August 4, 1995")
+    @offset = Offset.new
   end
 
   it 'exists' do
@@ -10,6 +10,6 @@ RSpec.describe Offset do
   end
 
   it 'can return a date as DDMMYY format' do
-    expect(@offset.date).to eq("040895")
+    expect(@offset.date.length).to eq(6)
   end
 end
