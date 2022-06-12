@@ -21,7 +21,7 @@ RSpec.describe Shift do
     expect(@shift.final_shift).to eq([3, 27, 73, 20])
   end
 
-  it 'can return the new encrypted message'
+  it 'can return the new encrypted message' do
     expect(@shift.forward).to eq("keder ohulw")
   end
 end
