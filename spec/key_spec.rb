@@ -14,6 +14,9 @@ RSpec.describe Key do
   end
 
   it 'can generate a key' do
-    expect(@key.key_generator.length).to eq(5)
+    expect(@key.key_generator.length).to eq(4)
+    expect(@key.key_generator).to eq([02, 27, 71, 15])
   end
+
+
 end
