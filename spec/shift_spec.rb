@@ -21,10 +21,12 @@ RSpec.describe Shift do
   end
 
   it 'can return the new encrypted message' do
-    expect(@shift.forward).to eq("keder ohulw")
+    @message = "hello world"
+    expect(@shift.forward(@message)).to eq("keder ohulw")
   end
 
   it 'can return the decrypt the message' do
-  expect(@shift.backwards).to eq("hello world")
+    @encrypted_message = "keder ohulw"
+  expect(@shift.backwards(@encrypted_message)).to eq("hello world")
   end
 end
