@@ -17,8 +17,8 @@ class Shift
     end
   end
 
-  def forward(message)
-    message.downcase.chars.each_with_index.map do |letter, index|
+  def forward
+    @message.downcase.chars.each_with_index.map do |letter, index|
       if alphabet.index(letter).nil?
         letter
       else
@@ -30,8 +30,8 @@ class Shift
     end.join
   end
 
-  def backwards(encrypted_message)
-    encrypted_message.downcase.chars.each_with_index.map do |letter, index|
+  def backwards
+    @message.downcase.chars.each_with_index.map do |letter, index|
       if alphabet.index(letter).nil?
         letter
       else
