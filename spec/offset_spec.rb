@@ -2,7 +2,7 @@ require './spec_helper'
 
 RSpec.describe Offset do
   before :each do
-    @offset = Offset.new
+    @offset = Offset.new("040895")
   end
 
   it 'exists' do
@@ -15,5 +15,6 @@ RSpec.describe Offset do
 
   it 'can return an array of the offset values' do
     expect(@offset.offset_calc.length).to eq(4)
+    expect(@offset.offset_calc).to eq([1, 0, 2, 5])
   end
 end
