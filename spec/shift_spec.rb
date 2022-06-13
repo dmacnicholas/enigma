@@ -8,7 +8,6 @@ RSpec.describe Shift do
     @message2 = "keder ohulw"
     @shift1 = Shift.new(@message1, @key, @offset)
     @shift2 = Shift.new(@message2, @key, @offset)
-
   end
 
   it 'exists' do
@@ -24,12 +23,10 @@ RSpec.describe Shift do
   end
 
   it 'can return the new encrypted message' do
-    # @message = "hello world"
     expect(@shift1.forward).to eq("keder ohulw")
   end
 
   it 'can return the decrypt the message' do
-    # @encrypted_message = "keder ohulw"
-  expect(@shift2.backwards).to eq("hello world")
+    expect(@shift2.backwards).to eq("hello world")
   end
 end

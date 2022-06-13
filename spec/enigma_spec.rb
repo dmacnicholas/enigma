@@ -20,6 +20,16 @@ RSpec.describe Enigma do
     expect(@input).to eq(@output)
   end
 
+  it 'can encrypt with a message only' do
+    result = @enigma.encrypt("hello world")
+    # @output = {encryption: "keder ohulw", key: "02715", date: "040895"}
+    # expect(@input).to eq(@output)
+    # require "pry"; binding.pry
+    expect(result[:encryption]).to be_a(String)
+    expect(result[:key]).to be_a(String)
+    expect(result[:date]).to be_a(String)
+  end
+
   it 'can decrypt a message with a key and date' do
     @input = @enigma.decrypt("keder ohulw", "02715", "040895")
     @output = {decryption: "hello world", key: "02715", date: "040895"}
