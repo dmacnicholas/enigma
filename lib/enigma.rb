@@ -9,18 +9,18 @@ class Enigma
   end
 
   def encrypt(message, key = nil, date = nil)
-    @date = date || todays_date
-    offset = Offset.new(@date).offset_calc
+    date_choice = date || todays_date
+    offset = Offset.new(date_choice).offset_calc
     key_to_use = Key.new(key).key_generator || Key.new(key).random_key_generator
-    shift = Shift.new(message, key_to_use, offset).forward(message)
+    shift = Shift.new(message, key_to_use, offset).forward
     {encryption: shift, key: key, date: date}
   end
 
   def decrypt(message, key = nil, date = nil)
-    @date = date || todays_date
-    offset = Offset.new(@date).offset_calc
+    date_choice = date || todays_date
+    offset = Offset.new(date_choice).offset_calc
     key_to_use = Key.new(key).key_generator || Key.new(key).random_key_generator
-    shift = Shift.new(message, key_to_use, offset).backwards(message)
+    shift = Shift.new(message, key_to_use, offset).backwards
     {decryption: shift, key: key, date: date}
   end
 end
