@@ -25,4 +25,9 @@ RSpec.describe Enigma do
     @output = {decryption: "hello world", key: "02715", date: "040895"}
     expect(@input).to eq(@output)
   end
+
+  # it 'can encrypt a message with a key and use todays date' do
+  #   @input = @enigma.encrypt("hello world", "02715")
+  #   @output = {encryption: "keder ohulw", key: "02715", date: "040895"}
+  # end
 end
