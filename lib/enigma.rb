@@ -20,10 +20,9 @@ class Enigma
   end
 
   def decrypt(message, key = nil, date = nil)
-    date_choice = date || todays_date
-    offset = Offset.new(date_choice).offset_calc
-    key_to_use = Key.new(key).key_generator || Key.new(key).random_key_generator
-    shift = Shift.new(message, key_to_use, offset).backwards
-    {decryption: shift, key: key, date: date}
+    offset = Offset.new(date)
+    key_to_use = Key.new(key)
+    shift = Shift.new(message, key_to_use.key_generator, offset.offset_calc).backwards
+    {decryption: shift, key: key_to_use.key, date: offset.date}
   end
 end
