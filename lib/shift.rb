@@ -1,5 +1,5 @@
 class Shift
-  attr_reader :message, :key, :offset, :encrypted_message
+  attr_reader :message, :key, :offset
 
   def initialize(message, key, offset)
     @message = message

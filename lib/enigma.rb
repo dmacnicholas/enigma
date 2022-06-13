@@ -7,10 +7,10 @@ class Enigma
     Date.today.strftime("%d%m%y")
   end
 
-  def encrypt(message, key, date)
+  def encrypt(message, key = nil, date = nil)
     offset = Offset.new(date).offset_calc
     key_to_use = Key.new(key).key_generator
-    shift = Shift.new(message, key_to_use, offset).forward
+    shift = Shift.new(message, key_to_use, offset).forward(message)
     {encryption: shift, key: key, date: date}
   end
 
