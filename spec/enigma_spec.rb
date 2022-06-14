@@ -22,9 +22,6 @@ RSpec.describe Enigma do
 
   it 'can encrypt with a message only' do
     result = @enigma.encrypt("hello world")
-    # @output = {encryption: "keder ohulw", key: "02715", date: "040895"}
-    # expect(@input).to eq(@output)
-    # require "pry"; binding.pry
     expect(result[:encryption]).to be_a(String)
     expect(result[:key]).to be_a(String)
     expect(result[:date]).to be_a(String)
@@ -35,9 +32,4 @@ RSpec.describe Enigma do
     @output = {decryption: "hello world", key: "02715", date: "040895"}
     expect(@input).to eq(@output)
   end
-
-  # it 'can encrypt a message with a key and use todays date' do
-  #   @input = @enigma.encrypt("hello world", "02715")
-  #   @output = {encryption: "keder ohulw", key: "02715", date: "040895"}
-  # end
 end

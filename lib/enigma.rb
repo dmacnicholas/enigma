@@ -9,7 +9,7 @@ class Enigma
   end
 
   def todays_date
-    Date.today.strftime("%m%d%y")
+    Time.now.strftime("%m%d%y")
   end
 
   def encrypt(message, key = nil, date = nil)
