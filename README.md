@@ -22,7 +22,7 @@ ruby ./lib/decrypt.rb encrypted.txt decrypted.txt 12345 140622
 
 ## Self-Assessment
 
-Upon completion of this project, I was asked to assess my performance based on [this rubric](https://backend.turing.io/module1/projects/enigma/rubric).
+Upon completion of this project, I was asked to assess my performance based on [this rubric](https://backend.turing.edu/module1/projects/enigma/rubric).
 
 |              | Functionality | Object Oriented Programming | Ruby Convention and Mechanics | Test Driven Development | Version Control |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
