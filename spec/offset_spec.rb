@@ -11,6 +11,12 @@ RSpec.describe Offset do
 
   it 'can return a date as DDMMYY format' do
     expect(@offset.date.length).to eq(6)
+    expect(@offset.date_generator).to be_a(String)
+  end
+
+  it 'can generate todays date' do
+    expect(@offset.date.length).to eq(6)
+    expect(@offset.date_generator).to be_a(String)
   end
 
   it 'can return an array of the offset values' do

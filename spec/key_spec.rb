@@ -23,6 +23,6 @@ RSpec.describe Key do
   end
 
   it 'can generate a random key' do
-    expect(Key.new.key).to be_a(String)
+    expect(Key.new.random_key_generator).to be_a(String)
   end
 end

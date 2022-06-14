@@ -20,7 +20,6 @@ class Shift
   def forward
     @message.downcase.chars.each_with_index.map do |letter, index|
       if alphabet.index(letter).nil?
-        letter
       else
         final_shift_index = index % 4 #index to use for final_shift
         shift_to_use = final_shift[final_shift_index] #number to add to current letter
@@ -33,7 +32,6 @@ class Shift
   def backwards
     @message.downcase.chars.each_with_index.map do |letter, index|
       if alphabet.index(letter).nil?
-        letter
       else
         final_shift_index = index % 4 #index to use for final_shift
         shift_to_use = -(final_shift[final_shift_index]) #number to add to current letter
