@@ -17,17 +17,17 @@ ruby ./lib/encrypt.rb message.txt encrypted.txt
 To decrypt, use the following syntax, similar to the above but with a third argument which is the random five-digit number used to encrypt the message (take note of it when encrypting) and the fourth argument is the date on which the message was encrypted in DDMMYY format:
 
 ```
-ruby ./lib/decrypt.rb encrypted.txt decrypted.txt 12345 061119
+ruby ./lib/decrypt.rb encrypted.txt decrypted.txt 12345 140622
 ```
 
 ## Self-Assessment
 
 Upon completion of this project, I was asked to assess my performance based on [this rubric](https://backend.turing.io/module1/projects/enigma/rubric).
 
-|              | Functionality | Object Oriented Programming | Test Driven Development | Version Control |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| Score | 4 | 4 | 4 | 4 |
-| Reason | Encrypt, decrypt, and crack methods successfully implemented and command line interfaces implemented for all. | Methods are less than 8 lines each, classes are less than 100 lines long, lines of code are less than 80 characters, two classes utilize class methods extensively, and variable and method names were named carefully for clarity about their purpose. With modifications to the character set, the module could be reused.| Tests were written before code, test coverage is at 100%, test names are specific, and mocks and stubs are used throughout the project. | 15 Pull Requests were made and merged, over 150 commits were made with clear messages and limited to small components of functionality.
+|              | Functionality | Object Oriented Programming | Ruby Convention and Mechanics | Test Driven Development | Version Control |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Score | 3 | 3 | 3 | 3 | 4 |
+| Reason | Enigma Class with encrypt and decrypt methods successfully implemented. Encrypt/decrypt command line interfaces successfully implemented. | Project is broken into logical components that are appropriately encapsulated. No classes are unreasonably small or large, or contain knowledge/information/behavior that they shouldn’t know about. Student can articulate the single responsibilities of the various components.| Code is mostly properly indented, spaced, and lines are not excessively long. Class, method, variable, and file names follow convention. Some enumerables/data structures chosen are the most efficient tool for a given job, and students can speak as to why those enumerables/data structures were chosen. At least one hash is implemented in a way that makes logical sense. | Every method is tested at both the unit and integration level, and completely verify expected behavior (i.e., if a single method does 3 things, all 3 things are explicitly tested). Obvious edge cases are addressed. git history demonstrates students are writing tests before implementation code. Test coverage metrics show coverage at 99% or greater. | Minimum 40 commits and 4 pull requests. All pull requests include related and logical chunks of functionality, and are named and documented to clearly communicate the purpose of the pull request. No commits include multiple pieces of functionality. |
 
 ---
 
